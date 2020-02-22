@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Encodage valide et bien structuré, très bon index avec plein de champs possible à interroger pour raffiner ses recherches. 
+-Quelques points de détails : Dans le cas d'une correspondance bien utiliser les balises de ce genre,
+dont opener et closer pour l'ouverture et la fermeture des lettres. 
+Il est dommage de ne pas avoir fait apparaître de manière explicite qui est l'émetteur de la lettre 
+et qui est le récepteur de la lettre
+-Pour la signalisation des personnages, quand le nom du personnage n'est pas indiqué, explicitement préférer <rs>.
+-->
+<?xml-model href="out/ODD_Sevigny1397-98_Gray.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/ODD_Sevigny1397-98_Gray.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Lettres de Madame de Sévigné</title>
+            <author>Madame de Sévigné</author>
+            <editor>Pierre-Marie Gault-de-Saint-Germain</editor>
+            <respStmt>
+               <resp>Encodage réalisé dans le cadre d'un devoir du Master TNAH</resp>
+               <persName>
+                  <forename>Edward</forename>
+                  <surname>Gray</surname>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher/>
+         </publicationStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Lettres de Madame de Sévigné, de sa famille, et de ses amis; édition ornée
+                     de vingt-cinq portratis dessinés par devéria, augmentée de plusieurs lettres
+                     inédites, des cent cinq lettres publiées en 1814,par Klostermann, des notes et
+                     notices de Grouvelle, et des réflexions de l'Abbé de Vauxelles; précédées d'une
+                     nouvelle notice biographique sur Madame de Sévigné et accompagnées de notes
+                     géographiques, historiques, politiaues, critiques et de moeurs, Par
+                     M.Gault-de-Saint-Germain.</title>
+                  <author><persName><forename>Marie</forename><surname> de
+                           Rabutin-Chantal</surname><roleName type="nobility">Marquise de
+                           Sévigné</roleName></persName></author>
+                  <editor><forename>Pierre-Marie</forename><surname>Gault-de-Saint-Germain</surname></editor>
+               </titleStmt>
+
+               <publicationStmt>
+                  <publisher>François-Denis Dalibon</publisher>
+                  <date type="composition" from="1693" to="1703">1693-1703</date>
+                  <date type="publication" when="1823">1823</date>
+                  <pubPlace><address>
+                        <street><num>5</num>Galerie de Nemours, Palais-Royal</street>
+                        <settlement>Paris</settlement>
+                        <country>France</country>
+                     </address></pubPlace>
+                  <distributor facs="https://gallica.bnf.fr/ark:/12148/bpt6k6323006w">Bibliothèque
+                     Nationale de France</distributor>
+                  <idno type="ark">ark:/12148/bpt6k6323006w</idno>
+                  <availability>
+                     <licence>Domaine Public</licence>
+                  </availability>
+               </publicationStmt>
+               <seriesStmt>
+                  <title type="main">Lettres de Madame de Sévigné, de sa famille, et de ses amis;
+                     édition ornée de vingt-cinq portratis dessinés par devéria, augmentée de
+                     plusieurs lettres inédites, des cent cinq lettres publiées en 1814,par
+                     Klostermann, des notes et notices de Grouvelle, et des réflexions de l'Abbé de
+                     Vauxelles; précédées d'une nouvelle notice biographique sur Madame de Sévigné
+                     et accompagnées de notes géographiques, historiques, politiaues, critiques et
+                     de moeurs, Par M.Gault-de-Saint-Germain.</title>
+                  <respStmt>
+                     <resp>12 volumes publiés en 1823, réunissant des lettres de Madame de Sévigné
+                        et de ses amis.</resp>
+                     <persName><forename>Marie</forename><surname>de
+                           Rabutin-Chantal</surname><roleName type="nobility">marquise de
+                           Sévigné</roleName></persName>
+                     <!-- mention other authors? -->
+                     <!-- soit doit editionStmt soit dans titleStmt, 
+                        vous avez fait des déclarations redondantes dans seriesStmt  -->
+                  </respStmt>
+                  <biblScope unit="volume">11</biblScope>
+                  <biblScope unit="part" from="1397" to="1398">Letters 1397-1398</biblScope>
+                  <biblScope unit="page" from="369" to="381">pp.369-381</biblScope>
+               </seriesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <settingDesc>
+            <listPlace type="France">
+               <place xml:id="france" type="royaume">
+                  <placeName type="royaume"><country>France</country></placeName>
+               </place>
+               <place xml:id="pyrenees" type="mountains">
+                  <geogName>Pyrénées</geogName>
+               </place>
+               <place xml:id="paris" type="ville">
+                  <placeName><country>France</country><settlement type="ville"
+                     >Paris</settlement><name/></placeName>
+               </place>
+               <place xml:id="vincennes" type="ville">
+                  <placeName><country>France</country><settlement type="ville" subtype="chateau"
+                        >Vincennes</settlement></placeName>
+               </place>
+               <place xml:id="bastille" type="chateau">
+                  <placeName><country>France</country><settlement type="ville"
+                        >Paris</settlement><name>Bastille</name></placeName>
+               </place>
+               <place xml:id="hotel_richelieu" type="hotel_particulier">
+                  <placeName><country>France</country><settlement type="ville"
+                        >Paris</settlement><name>Hotel de Richelieu</name></placeName>
+               </place>
+               <place xml:id="notre-dame" type="cathedral">
+                  <placeName><country>France</country><settlement type="ville"
+                        >Paris</settlement><name>Notre Dame</name></placeName>
+               </place>
+               <place xml:id="meudon" type="ville">
+                  <placeName><country>France</country><settlement type="ville"
+                     >Meudon</settlement></placeName>
+               </place>
+               <place xml:id="trousse" type="ville">
+                  <placeName><country>France</country><settlement type="ville">La
+                        Trousse</settlement></placeName>
+               </place>
+               <place xml:id="lisy" type="ville">
+                  <placeName><country>France</country><settlement type="ville"
+                     >Lisy</settlement></placeName>
+               </place>
+               <place xml:id="gap" type="ville">
+                  <placeName><country>France</country><settlement type="ville"
+                     >Gap</settlement></placeName>
+               </place>
+               <place xml:id="marseille" type="ville">
+                  <placeName><country>France</country><settlement type="ville"
+                        >Marseille</settlement></placeName>
+               </place>
+               <place xml:id="dauphine" type="region">
+                  <placeName><country>France</country><name>Dauphiné</name></placeName>
+               </place>
+               <place xml:id="mazargues" type="village">
+                  <placeName><country>France</country><settlement type="village"
+                        >Mazargues</settlement></placeName>
+               </place>
+               <place xml:id="bayonne" type="ville">
+                  <placeName><country>France</country><settlement type="ville"
+                     >Bayonne</settlement></placeName>
+               </place>
+               <place xml:id="strasbourg" type="ville">
+                  <placeName><country>France</country><settlement type="ville"
+                        >Strasbourg</settlement></placeName>
+               </place>
+               <place xml:id="ormesson" type="ville">
+                  <placeName><country>France</country><settlement type="ville"
+                     >Ormesson</settlement></placeName>
+               </place>
+            </listPlace>
+            <listPlace type="horsFrance">
+               <place xml:id="madrid" type="ville">
+                  <placeName><country>Spain</country><settlement type="ville"
+                     >Madrid</settlement></placeName>
+               </place>
+               <place xml:id="villaviciosa" type="ville">
+                  <placeName><country>Espagne</country><settlement type="ville"
+                        >Villaviciosa</settlement></placeName>
+               </place>
+               <place xml:id="angleterre" type="royaume">
+                  <placeName><country>Angleterre</country></placeName>
+               </place>
+               <place xml:id="hollande" type="royaume">
+                  <placeName><country>Hollande</country></placeName>
+               </place>
+               <place xml:id="espagne" type="royaume">
+                  <placeName><country>Espagne</country></placeName>
+               </place>
+               <place xml:id="italie" type="region">
+                  <placeName><country>Italie</country></placeName>
+               </place>
+               <place xml:id="chiari" type="ville">
+                  <placeName><country>Italie</country><settlement type="ville"
+                     >Chiari</settlement></placeName>
+               </place>
+               <place xml:id="cremone" type="ville">
+                  <placeName><country>Italie</country><settlement type="ville"
+                     >Crémona</settlement></placeName>
+               </place>
+               <place xml:id="naples" type="royaume">
+                  <placeName><country>Royaume de Naples</country></placeName>
+               </place>
+               <place xml:id="naplesville" type="ville">
+                  <placeName><country>Royaume de Naples</country><settlement type="ville"
+                        >Naples</settlement></placeName>
+               </place>
+               <place xml:id="souabe" type="region">
+                  <placeName><country>Saint Empire</country><region>Souabe</region></placeName>
+               </place>
+            </listPlace>
+         </settingDesc>
+         <particDesc>
+            <listPerson type="famille_sevigne">
+               <person sex="female" xml:id="f-m_sevigne">
+                  <persName><forename>Françoise-Marguerite</forename><surname>de
+                        Sévigné</surname><roleName type="nobility">comtesse de
+                     Grignan</roleName></persName>
+               </person>
+               <person sex="female" xml:id="m-a_gue-de-bagnols">
+                  <persName><forename>Marie-Angélique</forename><surname>du Gué de
+                        Bagnols</surname><roleName type="nobility">dame de
+                     Coulanges</roleName></persName>
+               </person>
+               <person sex="male" xml:id="f-a_monteil">
+                  <persName><forename>François Adhémar</forename><surname>de
+                        Monteil</surname><roleName type="nobility">comte de
+                     Grignan</roleName></persName>
+               </person>
+               <person sex="male" xml:id="p-e_coulanges">
+                  <persName><forename>Philippe-Emmanuel</forename><surname>Coulanges</surname><roleName
+                        type="nobility">marquis de Coulanges</roleName></persName>
+               </person>
+               <person sex="female" xml:id="m-g_tillieres">
+                  <persName><forename>Michelle-Gabrielle</forename><surname>du Gué de
+                        Bagnols</surname><roleName type="nobility">comtesse de
+                     Tillières</roleName></persName>
+               </person>
+               <person sex="male" xml:id="m-tillieres">
+                  <persName><forename>Jacques-Tanneguy</forename><surname>Le
+                        Veneur</surname><roleName type="nobility">comte de
+                     Tillières</roleName></persName>
+               </person>
+               <person sex="male" xml:id="joseph_grignan">
+                  <persName><forename>Joseph</forename><surname>de Monteil de
+                        Grignan</surname><roleName type="nobility">chevalier de
+                     Grignan</roleName></persName>
+               </person>
+               <person sex="female" xml:id="simiane">
+                  <persName><forename>Pauline Adhémar</forename><surname>de Monteil de
+                        Grignan</surname><roleName type="nobility">marquise de
+                     Simiane</roleName></persName>
+               </person>
+               <listRelation>
+                  <!-- Bien -->
+                  <relation name="epoux" mutual="#m-tillieres #m-g_tillieres"/>
+                  <relation name="epoux" mutual="#f-m_sevigne #f-a_monteil"/>
+                  <relation name="epoux" mutual="#m-a_gue-de-bagnols #p-e_coulanges"/>
+                  <relation name="enfant" active="#simiane" passive="#f-m_sevigne"/>
+               </listRelation>
+            </listPerson>
+            <listPerson type="maison-de-France">
+               <person sex="male" xml:id="louisXIV">
+                  <persName><forename>Louis XIV</forename><surname>de Bourbon</surname>
+                     <roleName type="nobility">roi de France et de Navarre</roleName></persName>
+               </person>
+               <person sex="male" xml:id="louis_duc_bourgogne">
+                  <persName><forename>Louis</forename><surname>de Bourbon</surname>
+                     <roleName type="nobility">duc de Bourgogne</roleName></persName>
+               </person>
+               <person sex="male" xml:id="philippeV">
+                  <persName><forename>Philippe V</forename><surname>de Bourbon</surname>
+                     <roleName type="nobility">roi d'Espagne</roleName></persName>
+               </person>
+               <person sex="male" xml:id="charles_duc_berry">
+                  <persName><forename>Charles</forename><surname>de Bourbon</surname>
+                     <roleName type="nobility">duc de Berry</roleName></persName>
+               </person>
+               <listRelation>
+                  <relation name="petit-fils"
+                     active="#louis_duc_bourgogne #philippeV #charles_duc_berry" passive="#louisXIV"
+                  />
+               </listRelation>
+            </listPerson>
+            <listPerson type="autres">
+               <person sex="male" xml:id="charlesVI">
+                  <persName><forename>Charles VI</forename><surname>von Habsburg</surname>
+                     <roleName type="nobility">empereur du Saint-Empire</roleName></persName>
+               </person>
+               <person sex="male" xml:id="vendome">
+                  <persName><forename>Louis Joseph</forename><surname>de Bourbon</surname><roleName
+                        type="nobility">duc de Vendôme</roleName></persName>
+               </person>
+               <person sex="female" xml:id="duchesse_sully">
+                  <persName><forename>Marie Antoinette</forename><surname>Servien</surname><roleName
+                        type="nobility">duchesse de Sully</roleName></persName>
+               </person>
+               <person sex="female" xml:id="lesdiguieres">
+                  <persName><forename/><surname/><roleName type="nobility">Madame de
+                        Lesdiguières</roleName></persName>
+               </person>
+               <person sex="female" xml:id="villeroy_femme">
+                  <persName><forename>Marguerite-Marie</forename><surname>de
+                        Cossé-Brissac</surname><roleName type="nobility">duchesse de
+                        Villeroy</roleName></persName>
+               </person>
+               <person sex="male" xml:id="villeroy">
+                  <persName><forename>François</forename><surname>de Neufville</surname><roleName
+                        type="nobility">duc de Villeroy</roleName><roleName type="nobility">Maréchal
+                        de France</roleName></persName>
+               </person>
+               <person sex="male" xml:id="eugene">
+                  <persName><forename>Eugene François</forename><surname>de
+                        Savoie-Carignano</surname><roleName type="nobility">Prince de
+                        Savoy</roleName></persName>
+               </person>
+               <person sex="male" xml:id="marlborough">
+                  <persName><forename>John</forename><surname>Churchill</surname><roleName
+                        type="nobility">Duke of Marlborough</roleName></persName>
+               </person>
+               <person sex="male" xml:id="catinat">
+                  <persName><forename>Nicolas</forename><surname> de Catinat de la
+                        Fauconnerie</surname><roleName type="nobility">seigneur de
+                        Saint-Gratien</roleName></persName>
+               </person>
+               <person sex="female" xml:id="bellefonds">
+                  <persName><forename>Marie</forename><surname>Gigault de
+                        Bellefonds</surname><roleName type="nobility">marquise de
+                     Villars</roleName></persName>
+               </person>
+               <person sex="male" xml:id="l-c_bellefonds">
+                  <persName><forename>Louis Christophe</forename><surname>de
+                        Gigault</surname><roleName type="nobility">marquis de
+                     Bellefonds</roleName></persName>
+               </person>
+               <person sex="male" xml:id="bernardin">
+                  <persName><forename>Bernardin</forename><surname>de Gigault</surname><roleName
+                        type="nobility">marquis de Bellefonds</roleName><roleName type="nobility"
+                        >Maréchal de France</roleName></persName>
+               </person>
+               <person sex="male" xml:id="louis-charles-bernardin-mrq-bellefonds">
+                  <persName><forename>Louis Charles Bernardin</forename><surname>de
+                        Gigault</surname><roleName type="nobility">marquis de
+                     Bellefonds</roleName></persName>
+               </person>
+               <person sex="male" xml:id="riccia">
+                  <persName><roleName type="nobility">Prince della Riccia</roleName></persName>
+               </person>
+               <person sex="male" xml:id="richelieu">
+                  <persName><forename>Armand-Jean</forename><surname>de Vignerot du
+                        Plessis</surname><roleName type="nobility">duc de
+                     Richelieu</roleName></persName>
+               </person>
+               <person sex="female" xml:id="m-t_rouille">
+                  <persName><forename>Marguerite-Thérèse</forename><surname>Rouillé</surname><roleName
+                        type="nobility">marquise de Noailles</roleName><roleName type="nobility"
+                        >duchesse de Richelieu</roleName></persName>
+               </person>
+               <person sex="male" xml:id="noailles">
+                  <persName><forename>Jean-François</forename><surname>de
+                        Noailles</surname><roleName type="nobility">marquis de
+                     Noailles</roleName></persName>
+               </person>
+               <person sex="male" xml:id="fenelon">
+                  <persName><forename>François</forename><surname>de Salignac de la
+                        Mothe-Fénelon</surname><roleName type="nobility">archevêque de
+                        Cambrai</roleName></persName>
+               </person>
+               <person sex="male" xml:id="bossuet">
+                  <persName><forename>Jacques-Bénigne</forename><surname>Bossuet</surname><roleName
+                        type="nobility">évêque de Meaux</roleName></persName>
+               </person>
+               <person sex="male" xml:id="henault">
+                  <persName><forename>Charles-Jean-François</forename><surname>Hénault</surname><roleName
+                        type="nobility">président de la Première chambre des
+                     Enquêtes</roleName></persName>
+               </person>
+               <person sex="female" xml:id="m-h_le-hardi">
+                  <persName><forename>Marie-Henriette</forename><surname>Le Hardi</surname><roleName
+                        type="nobility">dame de la Trousse</roleName><roleName type="nobility"
+                        >princesse de La Cisterne</roleName></persName>
+               </person>
+               <person sex="male" xml:id="pozzo">
+                  <persName><forename>Amédée Alphonse</forename><surname>dal
+                        Pozzo</surname><roleName type="nobility">prince della
+                     Cisterna</roleName></persName>
+               </person>
+               <person sex="female" xml:id="p-a_le-hardi">
+                  <!-- male ?-->
+                  <persName><forename>Philippe-Auguste</forename><surname>Le
+                        Hardi</surname><roleName type="nobility">marquis de la
+                     Trousse</roleName></persName>
+               </person>
+               <person sex="female" xml:id="marguerite-de-la-fond">
+                  <persName><forename>Marguerite</forename><surname>de la Fond</surname></persName>
+               </person>
+               <person sex="male" xml:id="testu">
+                  <persName><forename>Jacques</forename><surname>Testu de Belval</surname><roleName
+                        type="nobility">abbé</roleName></persName>
+               </person>
+               <person sex="female" xml:id="maintenon">
+                  <persName><forename>Frnaçoise</forename><surname>d'Aubigné</surname><roleName
+                        type="nobility">marquise de Maintenon</roleName></persName>
+               </person>
+               <person sex="male" xml:id="card_estrees">
+                  <persName><forename>César</forename><surname>d'Estrées</surname><roleName
+                        type="nobility">cardinal</roleName></persName>
+               </person>
+               <person sex="male" xml:id="chev_sanzei">
+                  <persName><roleName type="nobility">chevalier de Sanzei</roleName></persName>
+               </person>
+               <person sex="female" xml:id="mme_sanzei">
+                  <persName><roleName type="nobility">madame de Sanzei</roleName></persName>
+               </person>
+               <person sex="male" xml:id="comte-sanzei">
+                  <persName><roleName type="nobility">comte de Sanzei</roleName></persName>
+               </person>
+               <person sex="male" xml:id="marchin">
+                  <persName><forename>Ferdinand</forename><surname>de Marsin</surname><roleName
+                        type="nobility">comte de Marchin</roleName></persName>
+               </person>
+               <person sex="male" xml:id="elec-baviere">
+                  <persName><forename>Maximilien-Emmanuel</forename><surname>de
+                        Bavière</surname><roleName type="nobility">électeur de
+                     Bavière</roleName></persName>
+               </person>
+               <person sex="male" xml:id="villars">
+                  <persName><forename>Claude-Louis-Hector</forename><surname>de
+                        Villars</surname><roleName type="nobility">Maréchal de
+                     France</roleName></persName>
+               </person>
+               <person sex="female" xml:id="j-a_roque">
+                  <persName><forename>Jeanne Angélique</forename><surname>Roque de
+                        Varengeville</surname><roleName type="nobility">madame de
+                     Villars</roleName></persName>
+               </person>
+               <person sex="male" xml:id="faidit">
+                  <persName><surname>Faidit</surname><roleName type="nobility"
+                     >abbé</roleName></persName>
+               </person>
+               <person sex="male" xml:id="gueudeville">
+                  <persName><forename>Nicolas</forename><surname>gueudeville</surname></persName>
+               </person>
+               <person sex="male" xml:id="chambon">
+                  <persName><surname>Chambon</surname></persName>
+                  <occupation>docteur</occupation>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="volume" n="11">
+            <div type="letter" n="1397">
+               <head>Lettre MCCCXCVII. DE <persName ref="#m-a_gue-de-bagnols">Madame de
+                     Coulanges</persName> à <persName ref="#f-m_sevigne">Madame de
+                     Grignan</persName>. A <placeName ref="#paris">Paris</placeName>, le <date
+                     when="1702-04-04">4 avril 1702</date>.</head>
+               <!-- Pour une lettre, on utiliserait pour la date et lieu plutôt opener. 
+                  Pour l'émetteur et le destinataire, il faudrait avoir la lettre originale 
+                  pour savoir si c'est un ajout de l'éditeur ou pas-->
+               <p>Je suis bien récompensée du soin que j'ai pris pour le chocolat de <persName
+                     ref="#f-a_monteil">M. de Grignan</persName>, Madame, puisque cela m'a attiré
+                  une marque de l'honneur de votre souvenir. Il me semble que je vous aurois
+                  importunée, si je vous avois écrit dans toutes les occasions où il a été question
+                  de vous dans ce pays-ci. Vous avez fait les honneurs de la <placeName
+                     ref="#france">France</placeName> avec une telle magnificence et une telle
+                  profusion , que l'on en parle encore tous les jours. Vous allez avoir le <persName
+                     ref="#philippeV">roi d'Espagne</persName><note><p><persName ref="#philippeV">Le
+                           petit - fils</persName> de <persName ref="#louisXIV">Louis XIV</persName>
+                        se préparoit à quitter <placeName ref="#madrid">Madrid</placeName> pour
+                        aller se faire connoître dans <placeName ref="#naples">le royaume de
+                           Naples</placeName> où avoit éclaté une conspiration en <date when="1701"
+                           >1701</date>. Ce prince n'étoit point aimé. <placeName ref="#angleterre"
+                           >L'Angleterre</placeName> et la <placeName ref="#hollande"
+                           >Hollande</placeName>, résolues de le détrôner, fesoient des efforts
+                        incroyables en faveur de <persName ref="#charlesVI">l'archiduc</persName>,
+                        qu'on appeloit plaisamment : <emph rend="italic"><persName ref="#charlesVI"
+                              >Charles</persName>, par la grace des hérétiques, roi
+                           catholique</emph>. <persName ref="#charlesVI">L'archiduc
+                           Charles</persName> étoit haï en <placeName ref="#espagne"
+                           >Espagne</placeName>, la division dans tous les partis menacoit la ruine
+                        de <persName ref="#philippeV">Philippe V</persName>. Enfin la présence du
+                           <persName ref="#vendome">duc de Vendôme</persName> dans ses états lui
+                        valut une armée, et la bataille de <placeName ref="#villaviciosa">Villa -
+                           Viciosa</placeName> affermit la couronne d'Espagne sur la tête d'un fils
+                        de France.</p>
+                     <p><persName ref="#vendome">Vendôme</persName> occupe un rang superbe dans
+                        l'histoire pour le succès de cette cause jugée par la postérité. Ce général
+                        n'eut pas plutôt passé les <placeName ref="#pyrenees">Pyrénées</placeName>
+                        qu'il vit les grands délibérer sur le rang qu'ils lui donneroient. <said
+                           who="#vendome" aloud="true">Tout rang m'est bon,</said> leur dit-il,
+                           <said who="#vendome" aloud="true">je ne viens point vous disputer le pas,
+                           je viens sauver votre roi.</said> (Campagne de Vendôme) <emph
+                           rend="italic">G. D. S. G.</emph></p></note> : j'avoue que tous ces
+                  honneurs ne me laissent point oublier mes intérêts, et je crains toujours que cela
+                  ne retarde votre retour, que je ne puis m'empêcher de désirer très-vivement. Je ne
+                  doute point que vous n'ayez été fort sensible à la perte de notre pauvre <persName
+                     ref="#duchesse_sully">duchesse de Sully</persName><note><persName
+                        ref="#duchesse_sully">Marie-Antoinette Servien</persName> , morte le <date
+                        when="1702-01-15">15 janvier 1702</date>. <emph rend="italic">D.
+                     P.</emph></note> ; elle vous aimoit véritablement, et c'étoit une très-aimable
+                  femme. Ah ! Madame, je la vis la veille de sa mort ; elle se croyoit bien malade;
+                  mais elle étoit bien éloignée de penser que le terme fût aussi court ; sa docilité
+                  pour les médecins l'a tuée. Cependant, s'il est vrai que nos jours soient comptés,
+                  pourquoi ne pas nous désaccoutumer de nos ridicules raisonnements ? Quant à moi,
+                  qui me trouve seule de toutes les personnes avec qui j'ai passé ma vie, je demeure
+                  dans ma solitude, sans vouloir faire aucune nouvelle connoissance ; cela n'en vaut
+                  en vérité pas la peine. Ma vie est très-éloignée de celle du monde ; je ne m'y
+                  trouve plus du tout propre; les nouveautés qu'il me présente ne sont plus à mon
+                  usage, et notre antiquité n'est plus au sien : ainsi, graces à Dieu, nous nous
+                  passons à merveille l'un de l'autre. Vous jugez bien, Madame, que cela me rend peu
+                  digne du commerce que je pourrois avoir avec <persName ref="#simiane">madame de
+                     Simiane</persName> ; son âge<note><persName ref="#simiane">Madame de
+                        Simiane</persName> n'avoit alors que 26 à 27 ans. <emph rend="italic">D.
+                        P.</emph></note> et le mien sont trop disproportionnés. Je sais cependant
+                  qu'elle va habiter notre quartier, et je la plains beaucoup. Je suis assurée que
+                  quand elle auroit tort à votre égard, vous chercheriez toujours à la justifier;
+                  ainsi, j'espère que vous l'aimerez toujours, par la raison qu'elle vous est fort
+                  attachée, et que vous l'aimez naturellement; elle est aussi très-aimable, cela est
+                  constant.</p>
+
+               <p>Mais, Madame, savez-vous bien que votre amie <persName ref="#lesdiguieres">madame
+                     de Lesdiguières</persName> n'est point du tout en bonne santé ? elle a une
+                  jambe qu'elle ne sent point , et qui est enflée; elle n'imagine point d'autre
+                  remède que la saignée, qui est le seul, je crois, qui peut rendre son mal
+                  dangereux : il faudroit fournir des esprits , et elle se veut épuiser , ce qui
+                  n'est assurément pas raisonnable ; je vous en avertis, comme la seule personne qui
+                  peut lui faire entendre raison. La <persName ref="#villeroy_femme">maréchale de
+                     Villeroi</persName> a commencé a être affligée du jour que le <persName
+                     ref="#villeroy">maréchal</persName> partit pour <placeName ref="#italie"
+                     >l'Italie</placeName><note>Il avoit vu de près le vaillant <persName
+                        ref="#eugene">prince Eugène</persName> ; il savoit ce que valoit <persName
+                        ref="#marlborough">Marlborough</persName>; <persName ref="#catinat"
+                        >Catinat</persName> avec la valeur et la modestie d'un héros de l'antiquité
+                     battoit l'ennemi sous les ordres d'un général peu digne de commander, et
+                        <persName ref="#villeroy">Villeroi</persName>, dans les revers de son
+                     incapacité, acquéroit un nouveau degré d'estime dans l'esprit du <persName
+                        ref="#louisXIV">roi</persName>, qui ne le trouva jamais plus digne d'être
+                     son favori qu'après avoir été vaincu à <placeName ref="#chiari"
+                        >Chiari</placeName>, et fait prisonnier à <placeName ref="#cremone"
+                        >Crémone</placeName>. Tels étoient l'état des choses et le déréglement des
+                     esprits sous les combinaisons de l'hypocrisie, de la superstition et du
+                     fanatisme, qui hâtèrent la décadence et la fin désastreuse du grand siècle.
+                        <emph rend="italic">G. D. S. G.</emph></note> ; l'événement n'a que trop
+                  justifié la douleur; il étoit plus heureux étant le <persName ref="#villeroy"
+                     >marquis de Villeroi</persName>. Mais, Madame, vous nous avez envoyé un
+                  prisonnier qui l'est, je crois , présentement de <persName ref="#bellefonds"
+                     >mademoiselle de Bellefonds</persName> ; il soupa avec elle le jour de son
+                  arrivée à <placeName ref="#vincennes">Vincennes</placeName>; il fut charmé, avec
+                  raison, de sa beauté<note>Le <persName ref="#riccia">prince de La
+                        Riccia</persName> arrêté pendant la conspiration qui éclata à <placeName
+                        ref="#naplesville">Naples</placeName> en 1701. <persName ref="#bellefonds"
+                        >La fille</persName> du <persName ref="#l-c_bellefonds">marquis de
+                        Bellefonds</persName>, et <persName ref="#bellefonds">petite
+                        fille</persName> du <persName ref="#bernardin">maréchal</persName>,
+                     demeuroit à <placeName>Vincennes</placeName> avec sa famille et le jeune
+                        <persName ref="#louis-charles-bernardin-mrq-bellefonds">marquis de
+                        Bellefonds</persName>, qui étoit nommé gouverneur du château. <persName
+                        ref="#riccia">Le prince Napolitain</persName> fut depuis transféré à la
+                        <placeName ref="#bastille">Bastille</placeName> pour y subir une captivité
+                     qui dura près de douze ans. ( Voyez la note de la lettre suivante. ) <emph
+                        rend="italic">G. D. S. G.</emph></note>; il a gagné le donjon depuis avec
+                  l'idée de cette jolie fille, qui est toute des plus aimables ; enfin, elle n'a des
+                  Mancini que la beauté. J'ai si peu de commerce avec <persName ref="#richelieu">M.
+                     de Richelieu</persName><note><persName ref="#richelieu">Armand -Jean du
+                        Plessis, duc de Richelieu</persName>, épousa en troisièmes noces, le <date
+                        when="1702-03-02">20 mars 1702</date>, <persName ref="#m-t_rouille"
+                        >Marguerite-Thérèse Rouillé</persName>, veuve du <persName ref="#noailles"
+                        >marquis de Noailles</persName>. <emph rend="italic">D. P.</emph></note>,
+                  que je ne l'ai point vu depuis son mariage ; si on le voyoit toutes les fois qu'il
+                  se marie, on passeroit sa vie avec lui; il est trop jeune pour moi. Je ne sais pas
+                  si <persName ref="#m-t_rouille">madame de Richelieu</persName> lui trouvera ce
+                  défaut; on ne peut trop louer sa modération, elle n'a pas encore pris son
+                  tabouret. <placeName ref="#hotel_richelieu">L'hôtel de Richelieu</placeName> est à
+                  vendre. Pour <persName ref="#testu">l'abbé Testu</persName>, je le crois
+                  très-fâché de ne pouvoir suivre l'exemple de <persName ref="#richelieu">M. de
+                     Richelieu</persName>, sa jeunesse augmente tous les ans; et vous croyez bien,
+                  Madame, qu'avec un tel privilège, il est assurément trop jeune pour se marier; il
+                  m'a priée de vous dire des choses très-passionnées de sa part. La <persName
+                     ref="#m-h_le-hardi">princesse de La Cisterne</persName><note><persName
+                        ref="#m-h_le-hardi">Marie - Henriette Le Hardi</persName>, fille unique du
+                        <persName ref="#p-a_le-hardi">marquis de La Trousse</persName>, et de
+                        <persName ref="#marguerite-de-la-fond">Marguerite de La Fond</persName>,
+                     étoit veuve d'<persName ref="#pozzo">Amédée-Alphonse del Pozzo, marquis de
+                        Voghiera, prince de La Cisterne</persName>. <emph rend="italic">D.
+                     P.</emph></note>, à qui j'ai appris que vous vous étiez souvenue d'elle, m'a
+                  fait promettre, Madame, que je vous dirois combien elle est véritablement affligée
+                  de ne vous avoir point trouvée en ce pays-ci; elle y a réussi à merveille; la cour
+                  lui en a fait. Elle a tourné l'esprit de sa mère à tout ce qu'elle a désiré; sa
+                  petite-fille est morte, c'est un bien pour faire réussir ses projets; elle a un
+                  fils aîné, qui est un fort grand seigneur dans son pays, et un petit, beau comme
+                  le jour, qu'elle prétend établir en <placeName ref="#france">France</placeName>
+                  sous le nom du marquis de La Trousse<!-- oubli -->, avec ses deux belles terres de
+                     <placeName ref="#trousse">la Trousse</placeName> et <placeName ref="#lisy">de
+                     Lisy</placeName>; elle ne trouve nul obstacle du côté de <persName
+                     ref="#m-h_le-hardi">sa
+                  mère</persName><!-- pour une mention indirecte (sans dire le nom explicitement),
+                        on attendrait plutôt l'élément <rs>-->,
+                  qui lui a, je crois, assuré tout son bien ; c'est une très-habile femme que
+                     <persName ref="#m-h_le-hardi">madame de La Cisterne</persName>; je la regrette,
+                  elle nous quitte, après un voyage de huit jours qu'elle va faire à <placeName
+                     ref="#trousse">la Trousse</placeName>. Elle vous plairoit, Madame; elle a un
+                  esprit bon et naturel: je pense qu'elle pourra bien se venir établir en <placeName
+                     ref="#france">France</placeName> dans quelques années, mais je ne prends plus
+                  aucune part dans les projets éloignés. Nous sommes ici dans l'agitation du
+                        jubilé<note><persName ref="#henault">Le président Hénault</persName> annonce
+                     l'année sainte et l'ouverture du jubilé en <date when="1700">1700</date>, date
+                     qui ne s'accorde point avec la date de cette lettre qui donne l'année <date
+                        when="1702">1702</date>. <emph rend="italic">G. D. S. G.</emph></note>.
+                  Cette dévotion n'est point dans les principes du quiétisme<note>Le quiétisme, dont
+                     nous avons déjà dit un mot, étoit une de ces subtilités théologiques qui
+                     tendent à un état de perfection impossible, né du fanatisme espagnol, et qui
+                     prit racine en <placeName ref="#france">France</placeName> au sein de toutes
+                     les factions du molinisme et du jansénisme. Le livre des <emph rend="italic"
+                        >Maximes des Saints</emph>, publié par <persName ref="#fenelon"
+                        >Fénélon</persName>, excita l'absurde querelle du quiétisme dans laquelle
+                        <persName ref="#bossuet">Bossuet</persName> ne parut que trop célèbre aux
+                     yeux de la raison et du bon sens. Certes les quiétistes étoient des fous ; mais
+                     pour les condamner il ne falloit pas sacrifier <persName ref="#fenelon"
+                        >l'archevêque de Cambrai</persName> à l'ambition de <persName ref="#bossuet"
+                        >l'évéque de Meaux</persName>, aux craintes fausses de <persName
+                        ref="#louisXIV">Louis XIV</persName>, à l'hypocrisie de <persName
+                        ref="#maintenon">madame de Maintenon</persName>, à la mauvaise foi du
+                        <persName ref="#card_estrees">cardinal d'Estrées</persName>.<emph
+                        rend="italic">G. D. S. G.</emph></note>; car il se faut donner bien du
+                  mouvement. Le roi viendra trois jours de suite à <placeName ref="#notre-dame"
+                     >Notre-Dame</placeName>, à commencer jeudi, et s'en retournera à <placeName
+                     ref="#meudon">Meudon</placeName>; Monseigneur y est venu ces jours-ci; enfin,
+                  Madame, tout le monde est dans la ferveur, jusqu'à <persName ref="#p-e_coulanges"
+                     >M. de Coulanges</persName>, qui, avant que d'aller coùrir les rues, m'a fort
+                  priée de vous assurer de ses respects.
+                  <!-- Ici vous avez des formules qui assimile 
+                     ce passage à la cloture de la lettre, on attendrait un élément closer -->Je
+                  ne puis vous dire, Madame, à quel point je sais vous honorer et vous aimer; mais
+                  les absences sont trop longues, je ne les trouve point proportionnées à la
+                  brièveté de la vie, et vous jugez bien, Madame, par la tristesse de cette
+                  réflexion, de tout l'ennui que me cause votre éloignement.</p>
+            </div>
+
+            <div type="letter" n="1398">
+               <head>LETTRE MCCCXCVIII. DF <persName ref="#f-m_sevigne">MADAME DE GRIGNAN</persName>
+                  A <persName ref="#m-a_gue-de-bagnols">MADAME DE COULANGES</persName>. A <placeName
+                     ref="#marseille">Marseille</placeName>, le <date when="1703-02-05">5 février
+                     1703</date>.</head>
+
+               <p>N'avez-vous pas été bien fâchée, Madame, du malheur de ce pauvre <persName
+                     ref="#chev_sanzei">chevalier de Sanzei</persName>
+                  <note>Le <persName ref="#chev_sanzei">chevalier de Sanzei</persName>, capitaine de
+                     frégate, périt <date when="1703-01-01">le premier jour de l'an 1703</date>; par
+                     une tempête épouvantable, à la vue du port de <placeName ref="#bayonne"
+                        >Bayonne</placeName>, sans qu'il fût possible de le secourir. <emph
+                        rend="italic">D. P.</emph></note> ? Vous êtes si bonne pour cette famille,
+                  que vous avez assurément partagé la douleur de <persName ref="#mme_sanzei">madame
+                     de Sanzei</persName> et de ses enfants. J'ai prié <persName
+                     ref="#p-e_coulanges">M. de Coulanges</persName> de vous faire mes compliments
+                  sur cette funeste aventure. J'espérois voir ici <persName ref="#comte-sanzei">le
+                     comte de Sanzei</persName> ; il a mandé qu'il ne pouvoit se résoudre à venir à
+                     <placeName ref="#marseille">Marseille</placeName>, où il verroit le tombeau de
+                  son frère : cette délicatesse est juste, et me fait pardonner qu'il manque à la
+                  parole qu'il m'avoit donnée de passer un mois avec nous. Il est dans les
+                     montagnes<note>Il étoit à <placeName ref="#gap">Gap</placeName>, en <placeName
+                        ref="#dauphine">Dauphiné</placeName>, où il étoit occupé à faire un bon
+                     régiment d'un assez mauvais qui lui avoit été donné. <emph rend="italic">D.
+                        P.</emph></note>, qui ne lui donnent aucune idée de tempête ni de naufrage ;
+                  il a seulement à se garantir des précipices dont il est environné.</p>
+               <p>Le courrier que vous avez chargé d'une de vos lettres pour moi, n'est arrivé que
+                  depuis deux jours, et je n'ai donc pu vous dire plus tôt que j'ai été aussi peu à
+                  portée d'accepter le portrait du <persName ref="#philippeV">roi
+                     d'Espagne</persName><note>Le bruit avoit couru que le <persName
+                        ref="#philippeV">roi d'Espagne</persName> avoit donné à <persName
+                        ref="#f-m_sevigne">madame de Grignan</persName> son portrait enrichi de
+                     diamants. <emph rend="italic">D. P.</emph></note> que le portrait du <persName
+                     ref="#louisXIV">roi de France</persName>; les graces que <persName
+                     ref="#philippeV">Sa Majesté catholique</persName> a faites à <persName
+                     ref="#f-a_monteil">M. de Grignan</persName> sont d'une autre nature et d'un
+                  plus grand prix, parce qu'elles sont moins communes. Il a permis que <persName
+                     ref="#f-a_monteil">M. de Grignan</persName> eût l'honneur de le loger, et de le
+                  défrayer dans son séjour à <placeName ref="#marseille">Marseille</placeName>; ce
+                  sont des honneurs singuliers, qui se mettent parmi les titres des maisons ; et
+                  voilà les sortes de grâces qui viennent jusqu'à nous. Rien n'est pareil à
+                     <persName ref="#marchin">M. de Marchin</persName><note>Il accompagnoit le
+                        <persName ref="#philippeV">roi d'Espagne</persName> dans son voyage de
+                        <placeName ref="#naplesville">Naples</placeName>.</note>, et à l'admiration
+                  qu'il a laissée en ce pays. On ne sauroit faire une figure plus agréable auprès du
+                  roi catholique que celle qu'il y faisoit. Sa vivacité et son bon esprit le
+                  rendoient maître de tout auprès de <persName ref="#philippeV">Sa
+                     Majesté</persName>; et sa politesse et son attention à faire plaisir, le
+                  rendoient maître encore de tous les cœurs. La magnanimité de refuser la grandesse,
+                  ne nous paroît pas aussi récompensée qu'elle mérite; je croyois que nous le
+                  verrions du nombre des maréchaux<note>Le roi fit une promotion de dix maréchaux de
+                     France le <date when="1703-01-14">14 janvier 1703</date>, et le <persName
+                        ref="#marchin">comte de Marchin</persName> ne fut élevé à cette dignité
+                     qu'en <date when="1704">1704</date>, lorsqu'il fut choisi pour aller commander
+                     l'armée de France en <placeName ref="#souabe">Souabe</placeName>, sous les
+                     ordres de <persName ref="#elec-baviere">l'électeur de Bavière</persName>. <emph
+                        rend="italic">D.P.</emph></note>. Comment gouvernez-vous <persName
+                     ref="#villars">le maréchal de Villars</persName>? vous n'auriez pas mal marié
+                     <persName ref="#m-g_tillieres">madame votre nièce</persName><note><persName
+                        ref="#m-g_tillieres">Mademoiselle du Gué-Bagnols, comtesse de
+                        Tillières</persName>. (Voyez la lettre du <date when="1697-01-05">5 janvier
+                        1697</date>, et la note.)</note> si vous en aviez été la maîtresse. Le
+                  commandement des armées vaut bien la solidité des châteaux du <persName
+                     ref="#m-tillieres">comte de Tillières</persName>; on pouvait même en faire
+                  l'horoscope sans témérité; il a toujours pris la route et le vol de tous ceux qui
+                  arrivent. Je ne plaindrai guère <persName ref="#j-a_roque">madame de
+                     Villars</persName>, si elle est mécontente de sa destinée et d'aller à
+                     <placeName ref="#strasbourg">Strasbourg</placeName>; la voilà bien malade
+                  d'être la reine de tant de guerriers ; elle représentera Armide, et les enchantera
+                  tous. On nous a mandé que <persName ref="#j-a_roque">madame de Villars</persName>
+                  la mère avoit eu une nouvelle attaque; c'est celle-là qui me fait pitié; mais non,
+                  car elle se prépare à ce moment si certain et si oublié. <persName
+                     ref="#p-e_coulanges">M. de Coulanges</persName> croit donc aimer <placeName
+                     ref="#ormesson">Ormesson</placeName>; il en fait ses délices, comme <persName
+                     ref="#joseph_grignan">le chevalier de Grignan</persName> fait de <placeName
+                     ref="#mazargues">Mazargues</placeName><note>Jolie terre aux environs de
+                        <placeName ref="#marseille">Marseille</placeName>, apportée dans la maison
+                     de Grignan par une demoiselle d'Ornano. <emph rend="italic">D.
+                  P.</emph></note>, où il est avec des ouvriers, qui, à juste prix, lui font un joli
+                  jardin, chose inconnue en ce pays-ci. Si vous vouliez Madame, une chambre dans
+                  cette <emph rend="italic">bastide</emph>, vous vous délasseriez de la vue de vos
+                  bois, et vous verriez différents amphithéâtres richement décorés de dix mille
+                  maisons de campagnes rangées comme avec la main ; vous verriez la mer d'un côté
+                  dans toute son étendue, et de l'autre, resserrée dans des bords qui forment un
+                  canal magnifique; c'est assurément une jolie solitude. Je ne sais si <persName
+                     ref="#joseph_grignan">M. le chevalier</persName> se résoudra de la quitter pour
+                     <placeName ref="#paris">Paris</placeName>, et vous comprenez bien, Madame,
+                  qu'il nous attache, et que ce ne sera pas sans peine que nous le laisserons dans
+                  sa solitude, quoiqu'il l'aime, et qu'il en fasse un très-bon usage ; il s'est fait
+                  bâtir dans un couvent de Carmes, qui est à <placeName ref="#mazargues"
+                     >Mazargues</placeName>, un logement pour lui, avec une tribune où il est
+                  souvent. Il n'y a rien à craindre dans ce lieu que de vivre trop long-temps; on
+                  n'y voit que des personnes qui meurent à cent dix ans ; on ne connoît point les
+                  maladies ; le bon air, les bonnes eaux font régner non seulement la santé, mais la
+                  beauté. Dans ce canton, vous ne voyez que de jolis visages, que des hommes bien
+                  faits, et les vieux, comme les jeunes, ont les plus belles dents du monde. S'il y
+                  a un peuple qui arrive à l'idée du peuple heureux, représenté dans
+                     Télémaque<note>Tout le monde sait que <persName ref="#fenelon"
+                        >Fénélon</persName>, nommé en <date when="1689">1689</date> précepteur des
+                        <persName ref="#louis_duc_bourgogne">duc de Bourgogne</persName>, <persName
+                        ref="#philippeV">d'Anjou</persName> et <persName ref="#charles_duc_berry">de
+                        Berry</persName>, composa pour ces jeunes princes le <emph rend="italic"
+                        >Télémaque</emph>, ouvrage immortel dans lequel il déploie toutes les
+                     richesses de la langue françoise, et tous les avantages de la vertu, de la
+                     bonne foi, avec cette philosophie religieuse, consciencieuse qu'on retrouve
+                     dans tous les écrits de ce sage prélat, notamment dans ses <emph rend="italic"
+                        >Lettres Philosophiques</emph>. Le <emph rend="italic">Télémaque</emph>
+                     étoit dans les mains de tout le monde avant la mort de son auteur et sans sa
+                     participation. Le manuscrit de <persName ref="#fenelon">Fénélon</persName> est
+                     à la bibliothèque royale ; it est tout entier de sa main : on prétend que c'est
+                     sur ce manuscrit autographe que le marquis de Fénélon en donna, en <date
+                        when="1717">1717</date> , une nouvelle édition, citée dans la bibliographie
+                     comme étant l'édition originale. Ce bon livre a été blâmé par <persName
+                        ref="#faidit">l'abbé Faidit</persName>, et la <emph rend="italic">Critique
+                        générale de Télémaque</emph>, par <persName ref="#gueudeville"
+                        >Gueudeville</persName>, a fait des partisans. Mais quels étoient ces
+                     partisans du renégat <persName ref="#gueudeville">Gueudeville</persName>? les
+                     ennemis du peuple et des rois; ceux qui ne peuvent espérer de bonheur que dans
+                     l'exercice de l'arbitraire, de la mauvaise foi et de l'ignorance absolue ; et
+                     la main proscrite qui sert la passion de ces derniers est toujours bien
+                     accueillie. L'histoire en fourmille d'exemples. <emph rend="italic">G. D. S.
+                        G.</emph></note>, c'est celui de <placeName ref="#mazargues"
+                     >Mazargues</placeName> ; ils sont laborieux à l'excès; le terroir est cultivé
+                  et travaillé comme un jardin ; aussi tout le peuple est riche autant qu'il
+                  convient, c'est-à-dire qu'il abonde dans le nécessaire, sans que personne sorte de
+                  son état. Tous les hommes sont habillés en matelots, et les femmes en paysannes :
+                  la gaieté suit nécessairement la santé et l'abondance ; de sorte que les jours de
+                  repos, après avoir prié Dieu dans l'innocence de leurs cœurs, ils dansent si
+                  parfaitement, qu'aucun bal ne sauroit faire tant de plaisir à voir. Ne croyez pas,
+                  Madame, que j'aie dessein d'insulter à vos bergers et bergères d'<placeName
+                     ref="#ormesson">Ormesson</placeName> par une description du siècle d'or, je ne
+                  veux que donner de l'émulation à <persName ref="#p-e_coulanges">M. de
+                     Coulanges</persName>, et l'engager à me représenter, par quelque jolie chanson,
+                  son hameau et ceux qui l'habitent. Je vous rends graces du plaisir que vous voulez
+                  bien me donner de croire que vous me souhaitez autant que <persName
+                     ref="#lesdiguieres">madame de Lesdiguières</persName>; je vous assure que je
+                  profiterai jusqu'à l'indiscrétion du plaisir d'être avec vous, quand je serai à
+                     <placeName ref="#paris">Paris</placeName> : je ne sais pas précisément le
+                  temps. <persName ref="#chambon">Chambon</persName> est charmé de vos bontés , et
+                  très-reconnoissant ; vous lui avez obtenu un peu de liberté; il m'a écrit une
+                  lettre pleine de sentiments, que l'on trouve apparemment dans les cachots de la
+                     <placeName ref="#bastille">Bastille</placeName><note>Cest le même dont on a
+                     déjà fait mention ci-dessus. <persName ref="#chambon">Le docteur
+                        Chambon</persName>, soupconné d'avoir eu avec <persName ref="#riccia">le
+                        prince de La Riccia</persName> quelque intelligence favorable à l'évasion de
+                     ce Napolitain, prisonnier à <placeName ref="#vincennes">Vincennes</placeName>
+                     et depuis à la <placeName ref="#bastille">Bastille</placeName> , fut lui-même
+                     incarcéré dans cette prison d'état. Voyez <persName ref="#chambon"
+                        >Chambon</persName> sous la date du <date when="1701-06-17">17 juin
+                        1701</date>, <persName>le prince de La Riccia</persName><!-- il manque l'attribut ref --> dans la lettre
+                     précédente, et l'<emph rend="italic">Histoire de la Bastille</emph>, par
+                     Constantin de Renneville. <emph rend="italic">G. D. S. G.</emph></note>, et que
+                  Dieu y met pour la consolation des malheureux. Il n'aura rien perdu à sa prison,
+                  s'il y a gagné la piété et la soumission où il me paroît.
+                  <!-- idem plutôt closer -->Je suis tout à vous, Madame, et vous honore
+                  infiniment.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>
