@@ -46,7 +46,7 @@ et qui est le récepteur de la lettre
                <publicationStmt>
                   <publisher>François-Denis Dalibon</publisher>
                   <date type="composition" from="1693" to="1703">1693-1703</date>
-                  <date type="publication" when="1823">1823</date>
+                  <date type="publication" from="1823" to="1823">1823</date>
                   <pubPlace><address>
                         <street><num>5</num>Galerie de Nemours, Palais-Royal</street>
                         <settlement>Paris</settlement>
@@ -95,7 +95,7 @@ et qui est le récepteur de la lettre
                </place>
                <place xml:id="paris" type="ville">
                   <placeName><country>France</country><settlement type="ville"
-                     >Paris</settlement><name/></placeName>
+                     >Paris</settlement></placeName>
                </place>
                <place xml:id="vincennes" type="ville">
                   <placeName><country>France</country><settlement type="ville" subtype="chateau"
@@ -155,7 +155,7 @@ et qui est le récepteur de la lettre
             </listPlace>
             <listPlace type="horsFrance">
                <place xml:id="madrid" type="ville">
-                  <placeName><country>Spain</country><settlement type="ville"
+                  <placeName><country>Espagne</country><settlement type="ville"
                      >Madrid</settlement></placeName>
                </place>
                <place xml:id="villaviciosa" type="ville">
@@ -280,7 +280,7 @@ et qui est le récepteur de la lettre
                         type="nobility">duchesse de Sully</roleName></persName>
                </person>
                <person sex="female" xml:id="lesdiguieres">
-                  <persName><forename/><surname/><roleName type="nobility">Madame de
+                  <persName><roleName type="nobility">Madame de
                         Lesdiguières</roleName></persName>
                </person>
                <person sex="female" xml:id="villeroy_femme">
@@ -290,7 +290,7 @@ et qui est le récepteur de la lettre
                </person>
                <person sex="male" xml:id="villeroy">
                   <persName><forename>François</forename><surname>de Neufville</surname><roleName
-                        type="nobility">duc de Villeroy</roleName><roleName type="nobility">Maréchal
+                        type="nobility">duc de Villeroy, Maréchal
                         de France</roleName></persName>
                </person>
                <person sex="male" xml:id="eugene">
@@ -319,8 +319,7 @@ et qui est le récepteur de la lettre
                </person>
                <person sex="male" xml:id="bernardin">
                   <persName><forename>Bernardin</forename><surname>de Gigault</surname><roleName
-                        type="nobility">marquis de Bellefonds</roleName><roleName type="nobility"
-                        >Maréchal de France</roleName></persName>
+                        type="nobility">marquis de Bellefonds, Maréchal de France</roleName></persName>
                </person>
                <person sex="male" xml:id="louis-charles-bernardin-mrq-bellefonds">
                   <persName><forename>Louis Charles Bernardin</forename><surname>de
@@ -337,8 +336,7 @@ et qui est le récepteur de la lettre
                </person>
                <person sex="female" xml:id="m-t_rouille">
                   <persName><forename>Marguerite-Thérèse</forename><surname>Rouillé</surname><roleName
-                        type="nobility">marquise de Noailles</roleName><roleName type="nobility"
-                        >duchesse de Richelieu</roleName></persName>
+                        type="nobility">marquise de Noailles, duchesse de Richelieu</roleName></persName>
                </person>
                <person sex="male" xml:id="noailles">
                   <persName><forename>Jean-François</forename><surname>de
@@ -361,8 +359,7 @@ et qui est le récepteur de la lettre
                </person>
                <person sex="female" xml:id="m-h_le-hardi">
                   <persName><forename>Marie-Henriette</forename><surname>Le Hardi</surname><roleName
-                        type="nobility">dame de la Trousse</roleName><roleName type="nobility"
-                        >princesse de La Cisterne</roleName></persName>
+                        type="nobility">dame de la Trousse, princesse de La Cisterne</roleName></persName>
                </person>
                <person sex="male" xml:id="pozzo">
                   <persName><forename>Amédée Alphonse</forename><surname>dal
@@ -383,7 +380,7 @@ et qui est le récepteur de la lettre
                         type="nobility">abbé</roleName></persName>
                </person>
                <person sex="female" xml:id="maintenon">
-                  <persName><forename>Frnaçoise</forename><surname>d'Aubigné</surname><roleName
+                  <persName><forename>Françoise</forename><surname>d'Aubigné</surname><roleName
                         type="nobility">marquise de Maintenon</roleName></persName>
                </person>
                <person sex="male" xml:id="card_estrees">
@@ -423,7 +420,7 @@ et qui est le récepteur de la lettre
                      >abbé</roleName></persName>
                </person>
                <person sex="male" xml:id="gueudeville">
-                  <persName><forename>Nicolas</forename><surname>gueudeville</surname></persName>
+                  <persName><forename>Nicolas</forename><surname>Gueudeville</surname></persName>
                </person>
                <person sex="male" xml:id="chambon">
                   <persName><surname>Chambon</surname></persName>
@@ -440,7 +437,7 @@ et qui est le récepteur de la lettre
                <head>Lettre MCCCXCVII. DE <persName ref="#m-a_gue-de-bagnols">Madame de
                      Coulanges</persName> à <persName ref="#f-m_sevigne">Madame de
                      Grignan</persName>. A <placeName ref="#paris">Paris</placeName>, le <date
-                     when="1702-04-04">4 avril 1702</date>.</head>
+                        from="1702-04-04" to="1702-04-04">4 avril 1702</date>.</head>
                <!-- Pour une lettre, on utiliserait pour la date et lieu plutôt opener. 
                   Pour l'émetteur et le destinataire, il faudrait avoir la lettre originale 
                   pour savoir si c'est un ajout de l'éditeur ou pas-->
@@ -455,7 +452,7 @@ et qui est le récepteur de la lettre
                            petit - fils</persName> de <persName ref="#louisXIV">Louis XIV</persName>
                         se préparoit à quitter <placeName ref="#madrid">Madrid</placeName> pour
                         aller se faire connoître dans <placeName ref="#naples">le royaume de
-                           Naples</placeName> où avoit éclaté une conspiration en <date when="1701"
+                           Naples</placeName> où avoit éclaté une conspiration en <date from="1701" to="1701"
                            >1701</date>. Ce prince n'étoit point aimé. <placeName ref="#angleterre"
                            >L'Angleterre</placeName> et la <placeName ref="#hollande"
                            >Hollande</placeName>, résolues de le détrôner, fesoient des efforts
@@ -483,7 +480,7 @@ et qui est le récepteur de la lettre
                   doute point que vous n'ayez été fort sensible à la perte de notre pauvre <persName
                      ref="#duchesse_sully">duchesse de Sully</persName><note><persName
                         ref="#duchesse_sully">Marie-Antoinette Servien</persName> , morte le <date
-                        when="1702-01-15">15 janvier 1702</date>. <emph rend="italic">D.
+                           from="1702-01-15" to="1702-01-15">15 janvier 1702</date>. <emph rend="italic">D.
                      P.</emph></note> ; elle vous aimoit véritablement, et c'étoit une très-aimable
                   femme. Ah ! Madame, je la vis la veille de sa mort ; elle se croyoit bien malade;
                   mais elle étoit bien éloignée de penser que le terme fût aussi court ; sa docilité
@@ -550,7 +547,7 @@ et qui est le récepteur de la lettre
                   Mancini que la beauté. J'ai si peu de commerce avec <persName ref="#richelieu">M.
                      de Richelieu</persName><note><persName ref="#richelieu">Armand -Jean du
                         Plessis, duc de Richelieu</persName>, épousa en troisièmes noces, le <date
-                        when="1702-03-02">20 mars 1702</date>, <persName ref="#m-t_rouille"
+                           from="1702-03-02" to="1702-03-02">20 mars 1702</date>, <persName ref="#m-t_rouille"
                         >Marguerite-Thérèse Rouillé</persName>, veuve du <persName ref="#noailles"
                         >marquis de Noailles</persName>. <emph rend="italic">D. P.</emph></note>,
                   que je ne l'ai point vu depuis son mariage ; si on le voyoit toutes les fois qu'il
@@ -590,9 +587,9 @@ et qui est le récepteur de la lettre
                      ref="#france">France</placeName> dans quelques années, mais je ne prends plus
                   aucune part dans les projets éloignés. Nous sommes ici dans l'agitation du
                         jubilé<note><persName ref="#henault">Le président Hénault</persName> annonce
-                     l'année sainte et l'ouverture du jubilé en <date when="1700">1700</date>, date
+                     l'année sainte et l'ouverture du jubilé en <date from="1700" to="1700">1700</date>, date
                      qui ne s'accorde point avec la date de cette lettre qui donne l'année <date
-                        when="1702">1702</date>. <emph rend="italic">G. D. S. G.</emph></note>.
+                        from="1702" to='1702'>1702</date>. <emph rend="italic">G. D. S. G.</emph></note>.
                   Cette dévotion n'est point dans les principes du quiétisme<note>Le quiétisme, dont
                      nous avons déjà dit un mot, étoit une de ces subtilités théologiques qui
                      tendent à un état de perfection impossible, né du fanatisme espagnol, et qui
@@ -626,13 +623,13 @@ et qui est le récepteur de la lettre
             <div type="letter" n="1398">
                <head>LETTRE MCCCXCVIII. DF <persName ref="#f-m_sevigne">MADAME DE GRIGNAN</persName>
                   A <persName ref="#m-a_gue-de-bagnols">MADAME DE COULANGES</persName>. A <placeName
-                     ref="#marseille">Marseille</placeName>, le <date when="1703-02-05">5 février
+                     ref="#marseille">Marseille</placeName>, le <date from="1703-02-05" to="1703-02-05">5 février
                      1703</date>.</head>
 
                <p>N'avez-vous pas été bien fâchée, Madame, du malheur de ce pauvre <persName
                      ref="#chev_sanzei">chevalier de Sanzei</persName>
                   <note>Le <persName ref="#chev_sanzei">chevalier de Sanzei</persName>, capitaine de
-                     frégate, périt <date when="1703-01-01">le premier jour de l'an 1703</date>; par
+                     frégate, périt <date from="1703-01-01" to="1703-01-01">le premier jour de l'an 1703</date>; par
                      une tempête épouvantable, à la vue du port de <placeName ref="#bayonne"
                         >Bayonne</placeName>, sans qu'il fût possible de le secourir. <emph
                         rend="italic">D. P.</emph></note> ? Vous êtes si bonne pour cette famille,
@@ -674,16 +671,16 @@ et qui est le récepteur de la lettre
                   rendoient maître encore de tous les cœurs. La magnanimité de refuser la grandesse,
                   ne nous paroît pas aussi récompensée qu'elle mérite; je croyois que nous le
                   verrions du nombre des maréchaux<note>Le roi fit une promotion de dix maréchaux de
-                     France le <date when="1703-01-14">14 janvier 1703</date>, et le <persName
+                     France le <date from="1703-01-14" to="1703-01-14">14 janvier 1703</date>, et le <persName
                         ref="#marchin">comte de Marchin</persName> ne fut élevé à cette dignité
-                     qu'en <date when="1704">1704</date>, lorsqu'il fut choisi pour aller commander
+                     qu'en <date from="1704" to="1704">1704</date>, lorsqu'il fut choisi pour aller commander
                      l'armée de France en <placeName ref="#souabe">Souabe</placeName>, sous les
                      ordres de <persName ref="#elec-baviere">l'électeur de Bavière</persName>. <emph
                         rend="italic">D.P.</emph></note>. Comment gouvernez-vous <persName
                      ref="#villars">le maréchal de Villars</persName>? vous n'auriez pas mal marié
                      <persName ref="#m-g_tillieres">madame votre nièce</persName><note><persName
                         ref="#m-g_tillieres">Mademoiselle du Gué-Bagnols, comtesse de
-                        Tillières</persName>. (Voyez la lettre du <date when="1697-01-05">5 janvier
+                        Tillières</persName>. (Voyez la lettre du <date from="1697-01-05" to="1697-01-05">5 janvier
                         1697</date>, et la note.)</note> si vous en aviez été la maîtresse. Le
                   commandement des armées vaut bien la solidité des châteaux du <persName
                      ref="#m-tillieres">comte de Tillières</persName>; on pouvait même en faire
@@ -721,7 +718,7 @@ et qui est le récepteur de la lettre
                   faits, et les vieux, comme les jeunes, ont les plus belles dents du monde. S'il y
                   a un peuple qui arrive à l'idée du peuple heureux, représenté dans
                      Télémaque<note>Tout le monde sait que <persName ref="#fenelon"
-                        >Fénélon</persName>, nommé en <date when="1689">1689</date> précepteur des
+                        >Fénélon</persName>, nommé en <date from="1689" to="1689">1689</date> précepteur des
                         <persName ref="#louis_duc_bourgogne">duc de Bourgogne</persName>, <persName
                         ref="#philippeV">d'Anjou</persName> et <persName ref="#charles_duc_berry">de
                         Berry</persName>, composa pour ces jeunes princes le <emph rend="italic"
@@ -734,7 +731,7 @@ et qui est le récepteur de la lettre
                      participation. Le manuscrit de <persName ref="#fenelon">Fénélon</persName> est
                      à la bibliothèque royale ; it est tout entier de sa main : on prétend que c'est
                      sur ce manuscrit autographe que le marquis de Fénélon en donna, en <date
-                        when="1717">1717</date> , une nouvelle édition, citée dans la bibliographie
+                        from="1717" to='1717'>1717</date> , une nouvelle édition, citée dans la bibliographie
                      comme étant l'édition originale. Ce bon livre a été blâmé par <persName
                         ref="#faidit">l'abbé Faidit</persName>, et la <emph rend="italic">Critique
                         générale de Télémaque</emph>, par <persName ref="#gueudeville"
@@ -771,8 +768,8 @@ et qui est le récepteur de la lettre
                      ce Napolitain, prisonnier à <placeName ref="#vincennes">Vincennes</placeName>
                      et depuis à la <placeName ref="#bastille">Bastille</placeName> , fut lui-même
                      incarcéré dans cette prison d'état. Voyez <persName ref="#chambon"
-                        >Chambon</persName> sous la date du <date when="1701-06-17">17 juin
-                        1701</date>, <persName>le prince de La Riccia</persName><!-- il manque l'attribut ref --> dans la lettre
+                        >Chambon</persName> sous la date du <date from="1701-06-17" to="1701-06-17">17 juin
+                        1701</date>, <persName ref="riccia">le prince de La Riccia</persName><!-- il manque l'attribut ref --> dans la lettre
                      précédente, et l'<emph rend="italic">Histoire de la Bastille</emph>, par
                      Constantin de Renneville. <emph rend="italic">G. D. S. G.</emph></note>, et que
                   Dieu y met pour la consolation des malheureux. Il n'aura rien perdu à sa prison,
