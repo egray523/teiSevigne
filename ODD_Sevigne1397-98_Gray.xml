@@ -10,7 +10,7 @@ et surtout, au moment de lier votre rng à votre XML vous ne les avez pas associ
    <teiHeader xml:lang="fr">
       <fileDesc>
          <titleStmt>
-            <title type="short">Edition numérique des lettres de Madame de Sévigny, depuis l'edition
+            <title type="short">Edition numérique des lettres de Madame de Sévigné, depuis l'edition
                de Pierre-Marie Gualt-de-Saint-Germain</title>
             <author><persName><forename>Edward</forename><surname>Gray</surname></persName></author>
          </titleStmt>
